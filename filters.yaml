@@ -1,6 +1,4 @@
 filters:
-  sources:
-    - 'src/main/**'
   tests:
     - 'src/test/**'
   build:
