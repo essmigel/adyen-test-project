@@ -1,0 +1,12 @@
+filters:
+  sources:
+    - 'src/main/**'
+  tests:
+    - 'src/test/**'
+  build:
+    - 'build.gradle.kts'
+    - 'settings.gradle.kts'
+    - 'gradle.properties'
+    - 'gradle/**'
+  docs:
+    - '**/*.md'

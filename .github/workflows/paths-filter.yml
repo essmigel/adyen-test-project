@@ -1,0 +1,22 @@
+name: Paths filter
+
+on:
+  pull_request:
+
+jobs:
+  filter:
+    name: Detect changed path filters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository (full history for git diff)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Adyen Paths Filter
+        uses: essmigel/adyen-paths-filter@v0.1.0
+        with:
+          config: filters.yaml
+
+      - name: Show pipelines.env
+        run: cat pipelines.env
