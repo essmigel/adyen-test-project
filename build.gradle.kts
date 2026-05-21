@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.3.20"
+    id("org.adyen.junit-filename") version "1.0-SNAPSHOT"
 }
 
 group = "org.adyen"
@@ -19,4 +20,8 @@ kotlin {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+junitFilename {
+    outputDir = layout.buildDirectory.dir("junit-with-filename-test")
 }
